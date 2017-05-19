@@ -1,0 +1,53 @@
+@if $compteur == true {
+
+ 
+	.compteur {
+		width: 50%;
+		margin: auto;
+		textarea {
+			width: 100%;
+			border: 1px solid lighten($tertiary-color, 10%);
+			border-radius: 10px;
+			padding: $base-font-size * 0.3;
+			margin: $base-font-size 0;
+			/*color: $tertiary-color;*/
+		}
+		[type="submit"] {
+			width: 100px;
+			text-align: center;
+			border: 1px solid darken($secondary-color,10%);
+			color: $primary-color;
+			background: $secondary-color;
+			cursor: pointer;
+			padding: $base-font-size * 0.3;
+			border-radius: 10px;
+		}
+		[type="submit"]:hover {
+			transition: all .3s;
+			background: darken($secondary-color,10%);
+		}
+
+		.end {
+			color: darken($quaternary-color, 30%);
+		}
+	}
+
+
+
+
+	/*pour les tablettes et plus */
+	@media all and (min-width: $sm-screen) {
+		.lightbox .cadre {
+			width: 60%;
+		}
+	}/*end media query*/
+
+	/*pour les nodebook, medium screen et plus */
+	@media all and (min-width: $md-screen) {
+		.lightbox .cadre {
+			width: 40%;
+		}
+	}/*end media query*/
+
+
+}	/*end if*/
